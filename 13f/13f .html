@@ -1,0 +1,65 @@
+
+<html>
+<head>
+<meta charset="utf-8">
+<title>bla2</title>
+
+<script lang="Javascript">
+function media()
+{
+    var n1, n2, n3;
+            n1 = parseFloat(document.frm.txtNum1.value);
+            n2 = parseFloat(document.frm.txtNum2.value);
+            n3 = parseFloat(document.frm.txtNum3.value);
+                  
+
+            if (n1+n2>n3 && n1+n3>n2 && n2+n3>n1)
+            {
+
+                if(n1==n2 & n2==n3)
+                {
+                    document.getElementById("texto").innerHTML="Equilátero";
+                    document.getElementById("imagem").src = "img/equilatero.png";
+                }
+
+                else if (n1==n2 || n2==n3 || n1==n3)
+
+                {
+                    document.getElementById("texto").innerHTML="Isósceles";
+                    document.getElementById("imagem").src = "img/iso.png";
+                }
+
+                else
+
+                {
+                    document.getElementById("texto").innerHTML="Escalenos";
+                    document.getElementById("imagem").src =  "img/esc.png";
+
+                }
+            
+            }
+            else
+            {
+                document.getElementById("texto").innerHTML = "Não forma triângulo.";
+            }
+}
+</script>
+</head>
+<body>
+
+
+
+
+<form name="frm">
+    1º lado: <input type="text" name="txtNum1" size="5" value="0"><br>
+    2º lado: <input type="text" name="txtNum2" size="5" value="0"><br>
+    3º lado: <input type="text" name="txtNum3" size="5" value="0"><br>
+    <input type="button" value="media" name="btnVai" onclick="media();">
+</form>    
+
+<p id="texto"></p>
+<img width="245" height="300" id="imagem">
+
+
+</body>
+</html>

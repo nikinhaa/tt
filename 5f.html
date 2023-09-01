@@ -1,0 +1,45 @@
+Nome:Nicollas Nogueira da Silva
+Nome:Arthur Florindo Oliveira
+
+<html>
+<head>
+<meta charset="utf-8">
+<title>bla</title>
+<script lang="Javascript">
+function media()
+{
+    var n1, n2, n3, n4, resultado, aa;
+            n1 = parseFloat(document.frm.txtNum1.value);
+            n2 = parseFloat(document.frm.txtNum2.value);
+            n3 = parseFloat(document.frm.txtNum3.value);
+            n4 = parseFloat(document.frm.txtNum4.value);
+            aa = n1+n2+n3+n4;
+            resultado = aa/4;
+  
+            document.getElementById("alvo").innerHTML = 
+            "<b>" + resultado + "</b>";
+}
+</script>
+</head>
+<body>
+
+
+
+
+
+
+<form name="frm">
+    1º valor: <input type="text" name="txtNum1" size="5" value="0"><br>
+    2º valor: <input type="text" name="txtNum2" size="5" value="0"><br>
+    3º valor: <input type="text" name="txtNum3" size="5" value="0"><br>
+    4º valor: <input type="text" name="txtNum4" size="5" value="0"><br>
+    <input type="button" value="media" name="btnVai" onclick="media();">
+</form>    
+
+
+<p id="alvo"></p>
+
+
+
+</body>
+</html>

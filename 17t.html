@@ -1,0 +1,30 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tabuada</title>
+<script lang="Javascript">
+function TABUADINHA () 
+{
+    var vm, tab = "", res = "";
+
+    vm = document.frm.num.value
+
+    for (var c = 1; c <= 10; c++) 
+    {
+        res = c * vm;
+        tab += vm + " * " + c + " = " + res + "<br>";
+    }
+
+    document.getElementById("tC").innerHTML = tab;
+}
+</script>
+</head>
+<body>
+    <form name="frm">
+        <input type="text" name="num" size="5" value="0"><br>
+        <button type="button" onclick="TABUADINHA()">Tabuada</button>
+    </form>
+    <p id="tC"></p>
+      
+</body>
+</html>
